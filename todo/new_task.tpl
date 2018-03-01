@@ -26,10 +26,11 @@
       </div>
     </nav>
 
-<h2>Add a new task to the ToDo list:</h2>
-<form action="/new" method="GET">
-  <input type="text" size="100" maxlength="100" name="task">
-  <button type="submit" name="save" value="save">
-</form>
-
+    <div class="container" style="margin:auto;width:80%;padding-top:20px;">
+        <h3>Add a new task to the ToDo list:</h3>
+        <form action="/new" method="GET">
+          <input type="text" size="100" maxlength="100" name="task">
+          <button type="submit" class="btn btn-primary" name="save" value="save">Save</button>
+        </form>
+    </div>
 </body>
