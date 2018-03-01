@@ -34,11 +34,9 @@
         %for row in rows:
           <tr>
           %for col in row:
-            %num = col
-            %try:
-                %x=num+1
+            %if isinstance(num, int):
                 <td ahref="/edit/{{num}}">{{col}}</td>
-            %except TypeError:
+            %else:
                 <td>{{col}}</td>
           %end
           </tr>
