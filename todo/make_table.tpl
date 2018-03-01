@@ -35,7 +35,7 @@
           <tr>
           %for col in row:
             %num = col
-            <td ahref="/edit/{{num}}">{{col}}</td>
+            <td> <a href="/edit/{{num}}">{{col}}</a></td>
           %end
           </tr>
         %end
