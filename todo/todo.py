@@ -56,7 +56,7 @@ def edit_item(no):
                 '<div class="alert alert-primary  alert-dismissible fade show" role="alert">' \
                 'The item number %s was successfully updated' \
                 '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' \
-                '<span aria-hidden="true">&times;</span></button>' \
+                '<span aria-hidden="true">&times</span></button>' \
                 '</div></div>' % no
 
         return todo_list(), alert
