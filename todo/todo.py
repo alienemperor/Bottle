@@ -53,7 +53,7 @@ def edit_item(no):
         conn.commit()
 
         alert = '<div class="alert alert-primary alert-dismissible fade show" ' \
-                'role="alert" style="margin:auto;width:80%;padding-top:20px;">' \
+                'role="alert" style="margin:auto%;width:80%%;padding-top:20px%;">' \
                 'The item number %s was successfully updated' \
                 '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' \
                 '<span aria-hidden="true">&times;</span></button>' \
