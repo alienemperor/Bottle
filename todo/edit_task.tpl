@@ -19,7 +19,7 @@
             </div>
             <div class="form-group">
                 <br>
-                <input type="submit" name="save" value="save">
+                <button type="submit" class="btn btn-primary" name="save" value="save">Submit</button>
             </div>
 
         </form>
