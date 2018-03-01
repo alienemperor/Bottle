@@ -28,15 +28,16 @@
       </div>
     </nav>
 
-
-<p>The open items are as follows:</p>
-<table border="1">
-%for row in rows:
-  <tr>
-  %for col in row:
-    <td>{{col}}</td>
-  %end
-  </tr>
-%end
-</table>
+    <div class="container" style="margin:auto;width:80%;padding-top:20px;">
+        <h3>The open items are as follows:</h3>
+        <table class="table table-striped table-bordered">
+        %for row in rows:
+          <tr>
+          %for col in row:
+            <td>{{col}}</td>
+          %end
+          </tr>
+        %end
+        </table>
+    </div>
 </body>
