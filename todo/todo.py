@@ -60,7 +60,7 @@ def edit_item(no):
                 '</div>' % no
 
         def set_route():
-            route('/', 'GET', todo_list())
+            route('/', 'GET')
 
         return set_route(), alert
     else:
