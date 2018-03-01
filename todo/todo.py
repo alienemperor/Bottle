@@ -59,10 +59,7 @@ def edit_item(no):
                 '<span aria-hidden="true">&times;</span></button>' \
                 '</div>' % no
 
-        def set_route():
-            route('/', 'GET')
-
-        return set_route(), alert
+        return todo_list(), alert
     else:
         conn = sqlite3.connect('todo.db')
         c = conn.cursor()
