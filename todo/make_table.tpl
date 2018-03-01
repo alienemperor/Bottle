@@ -35,7 +35,11 @@
           <tr>
           %for col in row:
             %num = col
-            <td> <a href="/edit/{{num}}">{{col}}</a></td>
+            %if isinstance(num, int):
+                <td> <a href="/edit/{{num}}">{{col}}</a></td>
+            %else:
+                <td>{{col}}</td>
+            %end
           %end
           </tr>
         %end
