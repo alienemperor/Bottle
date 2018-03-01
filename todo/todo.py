@@ -26,7 +26,10 @@ def new_item():
         conn.commit()
         c.close()
 
-        alert = '<div class="alert alert-success" role="alert">New item %s was created successfully</div>' % new_id
+        alert = '<div class="alert alert-success" role="alert">New item %s was created successfully' \
+                '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' \
+                '<span aria-hidden="true">&times;</span>' \
+                '</button></div>' % new_id
 
         return template('new_task.tpl'), alert
     else:
@@ -49,7 +52,12 @@ def edit_item(no):
         c.execute("UPDATE todo SET task = ?, status = ? WHERE id LIKE ?", (edit, status, no))
         conn.commit()
 
-        return '<p>The item number %s was successfully updated</p>' % no
+        alert = '<div class="alert alert-primary" role="alert">The item number %s was successfully updated' \
+                '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' \
+                '<span aria-hidden="true">&times;</span></button>' \
+                '</div>' % no
+
+        return todo_list(), alert
     else:
         conn = sqlite3.connect('todo.db')
         c = conn.cursor()
