@@ -34,6 +34,7 @@
         %for row in rows:
           <tr>
           %for col in row:
+            %num = col
             %if isinstance(num, int):
                 <td ahref="/edit/{{num}}">{{col}}</td>
             %else:
