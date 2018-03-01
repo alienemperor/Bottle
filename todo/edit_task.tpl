@@ -5,23 +5,25 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-<p>Edit the task with ID = {{no}}</p>
-<form action="/edit/{{no}}" method="get">
-    <div class="form-group">
-        <input type="text" name="task" value="{{old[0]}}" size="100" maxlength="100">
-    </div>
-    <div class="form-group">
-        <select name="status">
-            <option>open</option>
-            <option>closed</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <br>
-        <input type="submit" name="save" value="save">
-    </div>
+    <div class="container">
+        <p>Edit the task with ID = {{no}}</p>
+        <form action="/edit/{{no}}" method="get">
+            <div class="form-group">
+                <input type="text" name="task" value="{{old[0]}}" size="100" maxlength="100">
+            </div>
+            <div class="form-group">
+                <select name="status">
+                    <option>open</option>
+                    <option>closed</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <br>
+                <input type="submit" name="save" value="save">
+            </div>
 
-</form>
+        </form>
+    </div
 </body>
 <!--
 <p>Edit the task with ID = {{no}}</p>
