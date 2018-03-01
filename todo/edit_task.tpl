@@ -28,7 +28,7 @@
       </div>
     </nav>
 
-    <div class="container">
+    <div class="container" style="margin:auto;width:80%;">
         <p>Edit the task with ID = {{no}}</p>
         <form action="/edit/{{no}}" method="get">
             <div class="form-group">
