@@ -58,8 +58,8 @@ def edit_item(no):
                 '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' \
                 '<span aria-hidden="true">&times;</span></button>' \
                 '</div>' % no
-        route('/')
-        return todo_list(), alert
+
+        return todo_list(), alert, route('/')
     else:
         conn = sqlite3.connect('todo.db')
         c = conn.cursor()
