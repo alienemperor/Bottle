@@ -31,7 +31,7 @@ def new_item():
                 '<span aria-hidden="true">&times;</span>' \
                 '</button></div>' % new_id
 
-        return route('/', 'GET'), alert
+        return template('new_task.tpl'), alert
     else:
         return template('new_task.tpl')
 
@@ -58,7 +58,7 @@ def edit_item(no):
                 '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' \
                 '<span aria-hidden="true">&times;</span></button>' \
                 '</div>' % no
-
+        route('/')
         return todo_list(), alert
     else:
         conn = sqlite3.connect('todo.db')
