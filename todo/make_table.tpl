@@ -34,7 +34,12 @@
         %for row in rows:
           <tr>
           %for col in row:
-            <td>{{col}}</td>
+            %num = col
+            %try:
+                %x=num+1
+                <td ahref="/edit/{{num}}">{{col}}</td>
+            %except TypeError:
+                <td>{{col}}</td>
           %end
           </tr>
         %end
