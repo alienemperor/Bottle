@@ -31,7 +31,7 @@ def new_item():
                 '<span aria-hidden="true">&times;</span>' \
                 '</button></div>' % new_id
 
-        return template('new_task.tpl'), alert
+        return route('/'), alert
     else:
         return template('new_task.tpl')
 
