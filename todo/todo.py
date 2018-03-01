@@ -26,7 +26,9 @@ def new_item():
         conn.commit()
         c.close()
 
-        return template('new_task.tpl'), '<div class="alert alert-primary" role="alert">%s was created</div>' % new_id
+        alert = '<div class="alert alert-primary" role="alert">%s was created</div>' % new_id
+
+        return template('new_task.tpl'), alert
     else:
         return template('new_task.tpl')
 
