@@ -52,12 +52,10 @@ def edit_item(no):
         c.execute("UPDATE todo SET task = ?, status = ? WHERE id LIKE ?", (edit, status, no))
         conn.commit()
 
-        alert = '<div class="container" style="margin:auto;width:80%;padding-top:20px;">' \
-                '<div class="alert alert-primary  alert-dismissible fade show" role="alert">' \
-                'The item number %s was successfully updated' \
+        alert = '<div class="alert alert-primary" role="alert">The item number %s was successfully updated' \
                 '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' \
-                '<span aria-hidden="true">&times</span></button>' \
-                '</div></div>' % no
+                '<span aria-hidden="true">&times;</span></button>' \
+                '</div>' % no
 
         return todo_list(), alert
     else:
